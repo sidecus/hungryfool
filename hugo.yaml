@@ -1,0 +1,23 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: sidecus's blog
+theme: ["PaperMod"]
+
+params:
+  homeInfoParams:
+    Title: sidecus's blog
+    Content: Can be Info, links, about...
+  socialIcons: # optional
+    - name: "twitter"
+      url: "<link>"
+    - name: "facebook"
+      url: "<link2>"
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowToc: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
