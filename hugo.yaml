@@ -1,6 +1,6 @@
-baseURL: https://example.org/
+baseURL: https://hungryfool.net/
 languageCode: en-us
-title: sidecus's blog
+title: sidec's blog
 theme: ["PaperMod"]
 
 menu:
@@ -23,8 +23,18 @@ outputs:
 
 params:
   homeInfoParams:
-    Title: sidecus's blog
-    Content: Can be Info, links, about...
+    Title: Stay Hungry. Stay Foolish.
+    Content: 
+      A simple line from Steve Jobs' 2005 Stanford address — borrowed from The Whole Earth Catalog.
+      After 20 years, it's still a great reminder for us to stay curious, keep learning, and never fear looking foolish.
+
+
+      You can watch his full commencement video on [YouTube](https://www.youtube.com/watch?v=jiHZqamCD8c).
+
+
+      Welcome to **hungryfool.net**.
+     
+
   socialIcons: # optional
     - name: "twitter"
       url: "<link>"

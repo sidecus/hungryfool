@@ -1,0 +1,30 @@
+---
+author: ["sidecus"]
+title: "Agent With MBTI Personality"
+date: 2025-09-30T17:53:33+08:00
+description: "Enhancing AI agents with MBTI personality"
+# summary: ""
+tags: ["agents", "paper"]
+categories: ["Agentic AI"]
+series: ["Agentic AI"]
+ShowToc: true
+TocOpen: true
+draft: true
+---
+
+This is an interesting paper to read:
+
+
+I stumbled upon a paper this week called “[Psychologically Enhanced AI Agents](https://arxiv.org/pdf/2509.04343)”, and it got me thinking: what if AI really had personality — not just polite tones or emojis, but an inner “way of thinking”?
+
+The authors built something called MBTI-in-Thoughts (MiT) — basically, a way to give large language models different MBTI types through prompts. No fine-tuning, no extra data, just clever framing. You tell the model it’s an INFJ or an ENTP, then see if it actually behaves that way. Turns out, it kind of does.
+
+Feeling types write warmer, more emotional stories. Thinking types stay logical and consistent in planning tasks. Introverts are a bit more reflective, while extroverts are chattier and more flexible in group settings. It’s not magic — the model’s still the same underneath — but the patterns are surprisingly human-like.
+
+What I found most interesting isn’t the technical side, but the psychological echo. These “personalities” affect how the AIs cooperate, argue, or make choices. Even without any “real” self, they start to feel more relatable, or at least more understandable. It’s like giving structure to their chaos — and maybe to ours too.
+
+Of course, MBTI isn’t perfect science. Psychologists have debated its reliability for years. But even if it’s a rough framework, it’s a familiar language for thinking about differences — human or artificial.
+
+For me, this paper isn’t about proving that AI can “feel.” It’s about designing intention: how we choose to make AI think, reason, and respond. Maybe one day, we’ll switch between AI personalities depending on what we need — a calm INFJ coach, a bold ENTJ strategist, or a curious INTP brainstormer.
+
+It’s a strange thought, but also kind of beautiful. Maybe personality — human or machine — is just a lens for how we see the world, and how we choose to care about it.
