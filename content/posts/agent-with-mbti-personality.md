@@ -6,14 +6,10 @@ description: "Enhancing AI agents with MBTI personality"
 # summary: ""
 tags: ["agents", "paper"]
 categories: ["Agentic AI"]
-series: ["Agentic AI"]
 ShowToc: true
-TocOpen: true
+TocOpen: false
 draft: true
 ---
-
-This is an interesting paper to read:
-
 
 I stumbled upon a paper this week called “[Psychologically Enhanced AI Agents](https://arxiv.org/pdf/2509.04343)”, and it got me thinking: what if AI really had personality — not just polite tones or emojis, but an inner “way of thinking”?
 

@@ -41,6 +41,11 @@ params:
     - name: "facebook"
       url: "<link2>"
   ShowShareButtons: true
+  ShareButtons:
+    - "twitter"
+    - "facebook"
+    - "linkedin"
+    - "reddit"
   ShowReadingTime: true
   fuseOpts: # Search params
     isCaseSensitive: false
