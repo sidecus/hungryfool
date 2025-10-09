@@ -8,7 +8,7 @@ tags: ["agents", "paper"]
 categories: ["Agentic AI"]
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 I stumbled upon a paper this week called “[Psychologically Enhanced AI Agents](https://arxiv.org/pdf/2509.04343)”, and it got me thinking: what if AI really had personality — not just polite tones or emojis, but an inner “way of thinking”?
