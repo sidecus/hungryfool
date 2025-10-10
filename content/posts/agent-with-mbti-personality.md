@@ -4,7 +4,7 @@ title: "Agent With MBTI Personality"
 date: 2025-09-30T17:53:33+08:00
 description: "Enhancing AI agents with MBTI personality"
 # summary: ""
-tags: ["agents", "paper"]
+tags: ["agents", "research"]
 categories: ["Agentic AI"]
 ShowToc: true
 TocOpen: false
