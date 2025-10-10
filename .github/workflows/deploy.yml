@@ -39,7 +39,7 @@ jobs:
         run: >
           hugo --minify --gc
           --cleanDestinationDir
-          --baseURL "https://hungryfool.net/"
+          --baseURL "http://www.hungryfool.net/"
 
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -50,4 +50,4 @@ jobs:
           publish_dir: ./public
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
-          cname: hungryfool.net
+          cname: www.hungryfool.net
