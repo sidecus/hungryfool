@@ -36,8 +36,9 @@ jobs:
           extended: true
 
       - name: Build site
-        run: hugo --minify --gc \
-          --cleanDestinationDir \
+        run: >
+          hugo --minify --gc
+          --cleanDestinationDir
           --baseURL "https://hungryfool.net/"
 
       - name: Deploy to GitHub Pages
