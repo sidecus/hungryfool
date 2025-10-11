@@ -7,7 +7,7 @@ tags: ["agents", "workflow", "industry"]
 categories: ["Agentic AI"]
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 Two announcements this week felt like markers of a shift.
