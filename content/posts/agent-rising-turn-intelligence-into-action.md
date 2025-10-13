@@ -13,7 +13,7 @@ draft: false
 Two announcements this week felt like markers of a shift.
 
 - n8n, the open-source automation platform, raised [$180 million in Series C funding](https://blog.n8n.io/series-c/).
-- And OpenAI introduced its Agent Builder, letting anyone create AI agents inside ChatGPT.
+- And OpenAI introduced its [Agent Builder](https://platform.openai.com/docs/guides/agent-builder), letting anyone create AI agents inside ChatGPT.
 
 Different origins — same direction: turning intelligence into action.
 
@@ -61,7 +61,6 @@ It’s no longer “Can we make models think?” but “Can we make them do — 
 
 Maybe the next big leap won’t come from another foundation model.
 It’ll come from agents that quietly, intelligently, make work flow.
-
 
 ----
 *Stay hungry, stay foolish — and keep building.*

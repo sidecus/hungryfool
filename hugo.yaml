@@ -24,28 +24,27 @@ outputs:
 params:
   homeInfoParams:
     Title: Stay Hungry. Stay Foolish.
-    Content: 
-      A simple line from Steve Jobs' 2005 Stanford address — borrowed from The Whole Earth Catalog.
-      After 20 years, it's still a great reminder for us to stay curious, keep learning, and never fear looking foolish.
+    Content: |
+      The phrase comes from Steve Jobs' 2005 Stanford commencement address — originally borrowed from The Whole Earth Catalog.
+      Two decades later, it still says everything that matters: stay curious, keep learning, and don't be afraid to look foolish.
+      You can revisit the full speech on [YouTube](https://www.youtube.com/watch?v=jiHZqamCD8c) — it's still worth every minute.
 
-
-      You can watch his full commencement video on [YouTube](https://www.youtube.com/watch?v=jiHZqamCD8c).
-
+      That spirit is what this space is about — a place to think aloud, build things, and learn.
 
       Welcome to **hungryfool.net**.
-     
 
   socialIcons: # optional
-    - name: "twitter"
+    - name: "x"
       url: "<link>"
     - name: "facebook"
       url: "<link2>"
+    - name: "rss"
+      url: "index.xml"
   ShowShareButtons: true
   ShareButtons:
-    - "twitter"
+    - "x"
     - "facebook"
     - "linkedin"
-    - "reddit"
   ShowReadingTime: true
   fuseOpts: # Search params
     isCaseSensitive: false
