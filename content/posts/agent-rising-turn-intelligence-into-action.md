@@ -2,7 +2,8 @@
 author: ["sidecus"]
 title: "Agents Rising: Turning Intelligence into Action"
 date: 2025-10-11T11:58:44+08:00
-description: ""
+summary: |
+    AI workflow automation company n8n's $180M series-c funding and OpenAI's recent announcement of Agent Builder show that industry values the plumbing of intelligence as much as the intelligence itself.
 tags: ["agents", "workflow", "industry"]
 categories: ["Agentic AI"]
 ShowToc: true
@@ -26,7 +27,7 @@ They’re solved through flows — pulling data, judging conditions, handling ex
 That’s not just intelligence; it’s orchestration.
 And this is where agents come in — systems that reason, act, and adapt.
 
-### Why n8n’s Raise Matters
+### n8n’s Recent Raise
 
 n8n has quietly become the bridge between models and work.
 With this new funding, it’s betting on AI workflow orchestration: connecting APIs, evaluating results, and enabling feedback loops.

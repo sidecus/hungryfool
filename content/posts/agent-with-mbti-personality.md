@@ -2,8 +2,8 @@
 author: ["sidecus"]
 title: "Agent With MBTI Personality"
 date: 2025-09-30T17:53:33+08:00
-description: "Enhancing AI agents with MBTI personality"
-# summary: ""
+summary: |
+    Researchers found that enhancing AI agents with MBTI personality can enhance the way agents act and make them more suitable for tasks in various scenarios.
 tags: ["agents", "research"]
 categories: ["Agentic AI"]
 ShowToc: true
