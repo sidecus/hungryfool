@@ -10,13 +10,13 @@ TocOpen: false
 draft: false
 ---
 
-Docker’s `--mount=type=cache` looks simple on the surface, but it hides an important mental model that often trips people up—especially when mixing **root vs non-root users**, **different home directories**, or **multi-stage builds**.
+Docker’s [cache mount](https://docs.docker.com/build/cache/optimize/#use-cache-mounts) (`--mount=type=cache`) looks simple on the surface, but it hides an important mental model that often trips people up—especially when mixing **root vs non-root users**, **different home directories**, or **multi-stage builds**.
 
-This post explains **how cache mounts actually work**, **why they don’t share by default**, and **how to correctly share them**, using `uv` as a concrete example.
+This post explains **how cache mounts actually work**, **why they don’t share by default**, and **how to correctly share them**, using [`uv` cache](https://docs.astral.sh/uv/concepts/cache/#cache-directory) as a concrete example.
 
 ---
 
-## How `--mount=type=cache` Actually Works
+## How Cache Mount Actually Works
 
 Consider this Dockerfile instruction:
 
@@ -82,8 +82,6 @@ This design avoids accidental cache corruption, but it means **sharing is opt-in
 
 To share cache across users, paths, stages, or images, you must use an **explicit cache ID**.
 
-### Example
-
 ```dockerfile
 RUN --mount=type=cache,id=uv-cache,target=/root/.cache/uv \
     uv sync
@@ -112,8 +110,7 @@ For `uv`, the cleanest approach is to **standardize the cache directory** across
 
 ```dockerfile
 ENV UV_CACHE_DIR=/cache/uv
-
-RUN --mount=type=cache,id=uv-cache,target=/cache/uv \
+RUN --mount=type=cache,id=uv-cache,target=${UV_CACHE_DIR} \
     uv sync
 ```
 
@@ -137,7 +134,8 @@ If the cache directory isn’t writable (or at least readable) by both, you’ll
 A pragmatic solution during build:
 
 ```dockerfile
-RUN --mount=type=cache,id=uv-cache,target=/cache/uv \
+ENV UV_CACHE_DIR=/cache/uv
+RUN --mount=type=cache,id=uv-cache,target=${UV_CACHE_DIR} \
     chmod -R 0777 /cache/uv || true
 ```
 
@@ -159,9 +157,9 @@ This ensures the cache remains usable regardless of UID.
 
 ---
 
-## Follow-Up: Dev Containers Caveat
+## Follow-Up Read: Dev Containers Caveat
 
-This only applies to **build-time caches**. You **cannot** use Docker cache mounts as runtime mounts inside containers e.g. dev containers.
+This solution only applies to **build-time caches**. You **cannot** use Docker cache mounts as runtime mounts inside containers including dev containers.
 
 For example, this **will not work**:
 
@@ -177,8 +175,10 @@ Cache mounts:
 - do not persist into running containers
 - behave the same for application containers and dev containers
 
-You *can* make cache mounts work when **building** a dev container, but that requires referencing a `Dockerfile` in `devcontainer.json`, which adds complexity.
-Compared to this, personally I prefer letting **all dev containers share `uv` cache from the host** using a volume mount at runtime instead.
+How do we benefit from uv cache in dev containers then?
+
+You *can* make cache mounts work when **building** the dev container, but it requires referencing a [custom `Dockerfile`](https://code.visualstudio.com/docs/devcontainers/create-dev-container#_dockerfile) in `devcontainer.json`, which adds devops complexity.
+Personally I prefer a simpler solution to let **all dev containers share one `uv` cache volume** using an explicit volume mount at runtime instead.
 
 ```json
 // devcontainer.json
@@ -190,4 +190,6 @@ Compared to this, personally I prefer letting **all dev containers share `uv` ca
 ]
 ```
 
-Simpler, faster, fewer surprises.
+Though this does not reuse the bulid time cache mount, it ensures all your dev containers reuse the same uv cache volume.
+
+One extra cache copy, but simpler, faster, fewer surprises.
