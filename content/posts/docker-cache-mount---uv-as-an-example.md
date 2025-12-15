@@ -12,7 +12,7 @@ draft: false
 
 Docker’s [cache mount](https://docs.docker.com/build/cache/optimize/#use-cache-mounts) (`--mount=type=cache`) looks simple on the surface, but it hides an important mental model that often trips people up—especially when mixing **root vs non-root users**, **different home directories**, or **multi-stage builds**.
 
-This post explains **how cache mounts actually work**, **why they don’t share by default**, and **how to correctly share them**, using [`uv` cache](https://docs.astral.sh/uv/concepts/cache/#cache-directory) as a concrete example.
+This post explains **how cache mounts actually work**, **why they don’t share by default**, and **how to correctly share them**, using [uv cache](https://docs.astral.sh/uv/concepts/cache/#cache-directory) as a concrete example.
 
 ---
 
@@ -157,7 +157,7 @@ This ensures the cache remains usable regardless of UID.
 
 ---
 
-## Follow-Up Read: Dev Containers Caveat
+## Dev Containers Caveat
 
 This solution only applies to **build-time caches**. You **cannot** use Docker cache mounts as runtime mounts inside containers including dev containers.
 
