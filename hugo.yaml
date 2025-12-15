@@ -3,6 +3,15 @@ languageCode: en-us
 title: My notes
 theme: ["PaperMod"]
 
+services:
+  googleAnalytics:
+    id: "G-VCJZS04E4K"
+
+privacy:
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: true
+
 menu:
   main:
     - name: Archive
@@ -22,7 +31,6 @@ outputs:
     - JSON # necessary for search
 
 params:
-  googleAnalyticsID: G-VCJZS04E4K
   homeInfoParams:
     Title: Stay Hungry. Stay Foolish.
     Content: |
