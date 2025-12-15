@@ -1,0 +1,12 @@
+{{- $ga := .Site.Params.googleAnalyticsID | default "" -}}
+{{- if and hugo.IsProduction $ga -}}
+  {{/* GA4 tracking snippet injected into <head> only when ID is present and we're building for production */}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ $ga }}');
+  </script>
+{{- end -}}

@@ -22,6 +22,7 @@ outputs:
     - JSON # necessary for search
 
 params:
+  googleAnalyticsID: G-VCJZS04E4K
   homeInfoParams:
     Title: Stay Hungry. Stay Foolish.
     Content: |
