@@ -1,6 +1,7 @@
 baseURL: https://sidecus.github.io/hungryfool/
 languageCode: en-us
-title: My notes
+title: A Hungry Fool
+subtitle: A blog by Sidecus
 theme: ["PaperMod"]
 
 services:
@@ -43,10 +44,10 @@ params:
       Welcome to **hungryfool.net**.
 
   socialIcons: # optional
-    - name: "x"
-      url: "<link>"
-    - name: "facebook"
-      url: "<link2>"
+    # - name: "x"
+    #   url: "<link>"
+    # - name: "facebook"
+    #   url: "<link2>"
     - name: "rss"
       url: "index.xml"
   ShowShareButtons: true

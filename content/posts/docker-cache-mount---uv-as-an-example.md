@@ -4,7 +4,7 @@ title: Docker Cache Mount - uv as an Example
 date: 2025-12-15T17:44:20+08:00
 description: ""
 tags: ["docker","devcontainers"]
-categories: ["Engineeering", "DevOps"]
+categories: ["Engineering", "DevOps"]
 ShowToc: true
 TocOpen: false
 draft: false

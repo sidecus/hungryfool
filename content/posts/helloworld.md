@@ -4,7 +4,7 @@ title: "Hello World"
 date: "2024-08-06"
 description: "Hello World, first post."
 summary: "First post using Hugo."
-tags: ["hello"]
+tags: []
 categories: ["Hello"]
 series: ["Hello"]
 ShowToc: true

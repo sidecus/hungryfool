@@ -4,7 +4,7 @@ title: "Agents Rising: Turning Intelligence into Action"
 date: 2025-10-11T11:58:44+08:00
 summary: |
     AI workflow automation company n8n's $180M series-c funding and OpenAI's recent announcement of Agent Builder show that industry values the plumbing of intelligence as much as the intelligence itself.
-tags: ["agents", "workflow", "industry"]
+tags: ["agents", "workflow", "technology"]
 categories: ["Agentic AI"]
 ShowToc: true
 TocOpen: false
