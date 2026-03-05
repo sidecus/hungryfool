@@ -4,7 +4,7 @@
 This post explains how cache mounts actually work, why they don’t share by default, and how to correctly share them, using uv cache as a concrete example.
 How Cache Mount Actually Works Consider this Dockerfile instruction:
 RUN --mount=type=cache,target=/root/.cache/uv \ uv sync When Docker executes this, it creates a named cache volume. The cache is keyed by:
-...</p></div><footer class=entry-footer><span title='2025-12-15 17:44:20 +0800 +0800'>December 15, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>sidecus</span></footer><a class=entry-link aria-label="post link to Docker Cache Mount - uv as an Example" href=https://www.hungryfool.net/posts/docker-cache-mount---uv-as-an-example/></a></article></main><footer class=footer><span>&copy; 2025 <a href=https://www.hungryfool.net/>A Hungry Fool</a></span> ·
+...</p></div><footer class=entry-footer><span title='2025-12-15 17:44:20 +0800 +0800'>December 15, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>sidecus</span></footer><a class=entry-link aria-label="post link to Docker Cache Mount - uv as an Example" href=https://www.hungryfool.net/posts/docker-cache-mount---uv-as-an-example/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://www.hungryfool.net/>A Hungry Fool</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
