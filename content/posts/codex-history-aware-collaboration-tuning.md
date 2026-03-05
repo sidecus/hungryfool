@@ -2,10 +2,13 @@
 author: ["sidecus"]
 title: "Codex: History Aware Collaboration Tuning (HACT)"
 date: 2026-03-05T13:58:56+08:00
-description: |
+summary: |
     Coding agents are awesome. But have you experienced design or pattern drift across threads? Have you ever been frustrated when you mentioned something clearly in an earlier thread, but the agent totally forgot it in a new one?
     Wouldn't it be nice if the agent could review and learn your preferences, then apply them automatically?
     Here is my story, and a way to make it happen with the Codex "HACT" Skill.
+description: |
+    Do you want to enhance your coding agents to auto learn from your past interactions? If yes, I am with you.
+    Here is my story and a possible solution.
 tags: ["codex", "agents"]
 categories: ["Coding Agents"]
 ShowToc: false
