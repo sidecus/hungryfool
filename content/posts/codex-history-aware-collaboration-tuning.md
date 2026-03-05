@@ -5,9 +5,9 @@ date: 2026-03-05T13:58:56+08:00
 description: |
     Coding agents are awesome. But have you ever experienced design or pattern drifts across threads? Have you ever been frustrated by the agent when you mentioned something clearly some time ago but in the new thread it totaly forgets?
     Wouldn't it be nice if the agent can review and learn your preferences and apply them automatically?
-    Here is my story, and a potential way to make it happen.
-tags: []
-categories: ["Agentic AI"]
+    Here is my story, and a way to make it happen with the Codex "HACT" Skill.
+tags: ["codex", "agents"]
+categories: ["Coding Agents"]
 ShowToc: false
 TocOpen: false
 draft: true
@@ -32,7 +32,7 @@ This post is about what happened next.
 
 ### The key question
 
-Can Codex **review prior project interactions** and use that to improve future interaction quality?
+Can Codex evaluate our actual interaction history and adapt future behavior?
 
 Short answer: **yes, it can**.
 
@@ -121,9 +121,9 @@ And I call it "Collaboration Tuning".
 
 ---
 
-### Next step: promote this into a Codex skill
+### Promote this into a Codex skill
 
-The obvious extension is a reusable skill (e.g. `HACT` - History Aware Collaboration Tuning) that runs periodically or after major changes and does:
+The obvious extension is a reusable skill that can run periodically or after major changes and does:
 
 - project-scoped history review
 - preference extraction
@@ -131,6 +131,12 @@ The obvious extension is a reusable skill (e.g. `HACT` - History Aware Collabora
 - suggested updates to guardrails/protocol
 
 That would let Codex auto-evolve around each user’s (or project's) engineering style and reduce repeated alignment work across threads and projects.
+
+I asked Codex to generate one for me. And here it is.
+
+[Codex HACT Skill - History Aware Collaboration Tuning](https://github.com/sidecus/hact)
+
+Please feel free to install it and try it out in your Codex sessions! You'll be amazed.
 
 ---
 
