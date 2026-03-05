@@ -3,19 +3,19 @@ author: ["sidecus"]
 title: "Codex: History Aware Collaboration Tuning (HACT)"
 date: 2026-03-05T13:58:56+08:00
 description: |
-    Coding agents are awesome. But have you ever experienced design or pattern drifts across threads? Have you ever been frustrated by the agent when you mentioned something clearly some time ago but in the new thread it totaly forgets?
-    Wouldn't it be nice if the agent can review and learn your preferences and apply them automatically?
+    Coding agents are awesome. But have you experienced design or pattern drift across threads? Have you ever been frustrated when you mentioned something clearly in an earlier thread, but the agent totally forgot it in a new one?
+    Wouldn't it be nice if the agent could review and learn your preferences, then apply them automatically?
     Here is my story, and a way to make it happen with the Codex "HACT" Skill.
 tags: ["codex", "agents"]
 categories: ["Coding Agents"]
 ShowToc: false
 TocOpen: false
-draft: true
+draft: false
 ---
 
-I’m building a night time simple simulation game called ZooPals for my kid: cute animals interact, short story moments appear using LLM, and my kid read and make choices. The goal is to promote reading and learning in a lightweight, playable loop.
+I’m building a simple nighttime simulation game called ZooPals for my kid: cute animals interact, short story moments appear via an LLM, and my kid reads and makes choices. The goal is to promote reading and learning in a lightweight, playable loop.
 
-The codebase itself is not huge, and Codex implemented the functionalities perfectly. However the result code was a bit messy since there was some gameplay related direction changes in the middle. I had to go through quite a few rounds of refactors to clean it up. Why? Because we repeatedly hit the same architectural drift patterns:
+The codebase itself is not huge, and Codex implemented features quickly. However, the resulting code got messy because I changed gameplay direction in the middle. I had to go through quite a few refactor rounds to clean it up. Why? Because we repeatedly hit the same architectural drift patterns:
 
 - orchestration code becoming too “thick”
 - proxy/wrapper layers accumulating
@@ -24,7 +24,7 @@ The codebase itself is not huge, and Codex implemented the functionalities perfe
 
 After several rounds, I needed to know whether Codex was actually learning from our collaboration history, or only responding to the latest prompt and repo state. That is why I asked:
 
-> “is this new change pattern based on our past conversations, or just existing files in the project?”
+> “Is this new change pattern based on our past conversations, or just existing files in the project?”
 
 This post is about what happened next.
 
@@ -48,7 +48,7 @@ First response from Codex was the typical limitation:
 
 I pushed:
 
-> “Aren't all our threads saved somewhere for this codex project? can you find a way to retrieve them?”
+> “Aren't all our threads saved somewhere for this Codex project? Can you find a way to retrieve them?”
 
 Then Codex changed from assumption mode to investigation mode:
 
@@ -63,6 +63,8 @@ And then:
 > “I found 45 ZooPals sessions spanning February 23, 2026 to March 4, 2026.”
 
 That was the turning point. We moved from “I don’t have history” to “**I can analyze project-scoped history**”.
+
+Important scope note: this worked because session artifacts were locally accessible in my environment, and they included enough metadata (`cwd`) to filter reliably by project. This should be treated as an environment-dependent capability, not a guaranteed behavior in every Codex setup.
 
 ---
 
@@ -88,13 +90,17 @@ So the real requirement became:
 - not just “generate code,” but
 - “learn my recurring constraints and apply them earlier.”
 
-History review enabled exactly that.
+History awareness and review enabled exactly that. In practice, the changes were concrete:
+
+- fewer "temporary" wrapper/proxy layers that later needed cleanup
+- thinner orchestration changes in new tasks
+- less naming churn across adjacent refactors
 
 ---
 
 ### Resulting collaboration contract
 
-We distilled the interaction history into 5 reusable principles:
+After Codex confirmed access to the thread history, I asked it to distill the interaction history into 5 reusable principles based on my own preference:
 
 1. Single ownership, clear boundaries  
 2. Thin orchestrators, focused domain logic  
@@ -117,7 +123,7 @@ It suggests a broader pattern for Codex workflows:
 - user preference alignment can be explicit and persistent
 - interaction quality can improve systematically over time
 
-And I call it "Collaboration Tuning".
+And I call it "HACT - **History Aware Collaboration Tuning**".
 
 ---
 
@@ -132,14 +138,15 @@ The obvious extension is a reusable skill that can run periodically or after maj
 
 That would let Codex auto-evolve around each user’s (or project's) engineering style and reduce repeated alignment work across threads and projects.
 
-I asked Codex to generate one for me. And here it is.
+So I asked Codex to generate one for me. And here it is.
 
 [Codex HACT Skill - History Aware Collaboration Tuning](https://github.com/sidecus/hact)
 
-Please feel free to install it and try it out in your Codex sessions! You'll be amazed.
+Plase feel free to install it and try it in your Codex project. You'll be amazed.
+![Sample Hact Output](../../images/hact-output.jpg)
 
 ---
 
-### Takeaway
+### P.S.
 
-The most useful outcome was not a single refactor. It was proving that coding agents can be pushed to **review history, learn recurring preferences, and improve future collaboration quality** in a concrete, auditable way.
+This post was mostly written by Codex itself. :)

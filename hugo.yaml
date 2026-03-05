@@ -13,6 +13,14 @@ privacy:
     disable: false
     respectDoNotTrack: true
 
+markup:
+  goldmark:
+    renderHooks:
+      image:
+        enableDefault: true
+      link:
+        enableDefault: true
+
 menu:
   main:
     - name: Archive
@@ -65,4 +73,3 @@ params:
     minMatchCharLength: 0
     # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-    
